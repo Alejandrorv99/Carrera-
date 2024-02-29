@@ -1,0 +1,43 @@
+
+	import java.util.Scanner;
+
+	
+	
+	public class CarreraConejoLiebre {
+		static int posicionTortuga;
+		static int posicionLiebre;
+		static int meta = 100;
+		public static void main(String[] args) {
+			
+			while (posicionTortuga < meta && posicionLiebre < meta) {  	
+	    	Scanner scanner = new Scanner(System.in);
+
+	        System.out.print("Ingrese la cantidad de pasos para la tortuga: ");
+	        int pasosTortuga = scanner.nextInt();
+
+	        System.out.print("Ingrese la cantidad de pasos para la liebre: ");
+	        int pasosLiebre = scanner.nextInt();
+
+           posicionTortuga += pasosTortuga;
+           posicionLiebre += pasosLiebre;
+
+           // Mostrar posiciones
+           System.out.println("Tortuga " + posicionTortuga + " Liebre: " + posicionLiebre);
+			}
+          
+	         
+
+	            // Verificar si alguien ganó
+	            if (posicionTortuga <= posicionLiebre && posicionTortuga >= posicionLiebre) {
+	                System.out.println("¡Empate!");
+	            } else if (posicionTortuga >= meta) {
+	                System.out.println("¡La tortuga gana!");
+	            } else if (posicionLiebre >= meta) {
+	                System.out.println("¡La liebre gana!");
+	            }
+	        
+
+	        
+	    }
+	}
+
